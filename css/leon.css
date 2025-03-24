@@ -185,8 +185,10 @@ body {
 }
 
 .landing .intro-text p {
-    font-size: 19px;
+    font-size: 20px;
     line-height: 1.8;
+    font-weight: bold;
+    color: black;
 }
 
 .features {
@@ -326,4 +328,88 @@ body {
     color: #777;
     line-height: 1.8;
     margin-bottom: 0;
+}
+
+.about {
+    padding-top: var(--section-padding);
+    padding-bottom: calc(var(--section-padding) + 60px);
+}
+
+.about .container .about-content {
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.about .container .about-content .image {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    max-width: 100%;
+}
+
+.about .container .about-content .image::before {
+    position: absolute;
+    content: "";
+    background-color: var(--secondary-color);
+    width: 100px;
+    height: calc(100% + 80px);
+    top: -40px;
+    left: 0;
+    z-index: -1;
+
+}
+
+.about .container .about-content .image::after {
+    position: absolute;
+    content: "";
+    background-color: white;
+    width: 120px;
+    height: 300px;
+    border-left: 80px solid var(--main-color);
+    border-bottom: 80px solid var(--main-color);
+    right: -150px;
+    top: -40px;
+    z-index: -1;
+}
+
+.about .container .about-content .text {
+    flex-basis: calc(100% - 500px);
+    padding-left: 60px;
+}
+
+.about .container .about-content .text p:first-of-type {
+    margin-bottom: 50px;
+    font-weight: bold;
+    line-height: 2;
+}
+
+.about .container .about-content .text hr {
+    width: 50%;
+    display: inline-block;
+    border-color: var(--main-color);
+}
+
+.about .container .about-content .text p:last-of-type {
+    line-height: 2;
+    color: #777;
+}
+
+@media (max-width: 991px) {
+    .about .container .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about .container .about-content .image::after,
+    .about .container .about-content .image::before {
+        display: none;
+    }
+
+    .about .container .about-content .image {
+        margin-bottom: 0 auto 60px;
+
+    }
 }
