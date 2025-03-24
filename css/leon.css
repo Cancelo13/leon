@@ -110,6 +110,7 @@ body {
 
 .header .links:hover ul {
     display: block;
+    z-index: 1020;
 }
 
 .header .links ul li a {
@@ -142,6 +143,9 @@ body {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
+    width: 320px;
+    max-width: 100%;
 }
 
 .landing .intro-text h1 {
@@ -153,5 +157,39 @@ body {
 }
 
 .landing .intro-text p {
-    
+    font-size: 19px;
+    line-height: 1.8;
+}
+
+.features {
+    padding: top 60px bottom 60px;
+    background-color: #f6f6f6;
+}
+
+.features .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.features .feat {
+    padding: 20px;
+    text-align: center;
+}
+
+.features .feat i {
+    color: var(--main-color);
+}
+
+.features .feat h3 {
+    font-weight: 800;
+    margin: 10px 0;
+
+}
+
+.feat ures .feat p {
+    line-height: 1.8;
+    color: #777;
+    font-size: 18px;
+
 }
