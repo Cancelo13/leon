@@ -36,6 +36,8 @@ body {
 :root {
     --main-color: #10cab7;
     --secondary-color: #2c4755;
+    --section-padding: 60px;
+    --section-background: #f6f6f6;
 }
 
 .container {
@@ -188,8 +190,9 @@ body {
 }
 
 .features {
-    padding: top 60px bottom 60px;
-    background-color: #f6f6f6;
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-color: var(--section-background);
 }
 
 .features .container {
@@ -221,9 +224,8 @@ body {
 }
 
 .services {
-    padding-top: 60px;
-    padding-bottom: 60px;
-    background-color: #f6f6f6;
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
 }
 
 .services .container .service-content {
@@ -289,4 +291,39 @@ body {
     .image-col {
         display: none;
     }
+}
+
+.portfolio {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-color: var(--section-background);
+}
+
+.portfolio .container .portfolio-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 80px;
+    margin-top: 80px;
+}
+
+.portfolio .container .portfolio-content .card {
+    background-color: white;
+}
+
+.portfolio .container .portfolio-content .card img {
+    max-width: 100%;
+}
+
+.portfolio .container .portfolio-content .card .info {
+    padding: 20px;
+}
+
+.portfolio .container .portfolio-content .card .info h3 {
+    margin: 0;
+}
+
+.portfolio .container .portfolio-content .card .info p {
+    color: #777;
+    line-height: 1.8;
+    margin-bottom: 0;
 }
