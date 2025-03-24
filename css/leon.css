@@ -8,6 +8,10 @@ body {
     font-family: "work Sans", sans-serif;
 }
 
+:root {
+    --main-color: #10cab7;
+}
+
 .container {
     padding-left: 15px;
     padding-right: 15px;
@@ -123,4 +127,31 @@ body {
 
 .header .links ul li:not(:last-child) a {
     border-bottom: 1px solid #ddd;
+}
+
+
+.landing {
+    background-image: url(../images/back.jpg);
+    background-size: cover;
+    height: calc(100vh - 64px);
+    position: relative;
+}
+
+.landing .intro-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.landing .intro-text h1 {
+    color: var(--main-color);
+    margin: 0;
+    font-weight: bold;
+    font-size: 50px;
+    text-align: center;
+}
+
+.landing .intro-text p {
+    
 }
