@@ -8,8 +8,34 @@ body {
     font-family: "work Sans", sans-serif;
 }
 
+.special-heading {
+    font-size: 100px;
+    color: #ebeced;
+    text-align: center;
+    letter-spacing: -3px;
+    margin: 0;
+}
+
+.special-heading+p {
+    margin: -30px 0 0;
+    text-align: center;
+    font-size: 20px;
+    color: #797979;
+}
+
+@media(max-width: 767px) {
+    .special-heading {
+        font-size: 50px;
+    }
+
+    .special-heading+p {
+        margin-top: -20px;
+    }
+}
+
 :root {
     --main-color: #10cab7;
+    --secondary-color: #2c4755;
 }
 
 .container {
@@ -96,6 +122,7 @@ body {
     top: calc(100% + 15px);
     background-color: #f6f6f6;
     padding: 10px;
+    z-index: 1;
 }
 
 .header .links ul::before {
@@ -110,7 +137,6 @@ body {
 
 .header .links:hover ul {
     display: block;
-    z-index: 1020;
 }
 
 .header .links ul li a {
@@ -192,4 +218,75 @@ body {
     color: #777;
     font-size: 18px;
 
+}
+
+.services {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #f6f6f6;
+}
+
+.services .container .service-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 100px;
+}
+
+.services .container .service-content .srv {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+@media (max-width: 767px) {
+    .services .container .service-content .srv {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.services .container .service-content .srv i {
+    color: var(--main-color);
+    flex-basis: 60px;
+}
+
+.services .container .service-content .srv .text {
+    flex: 1;
+}
+
+.services .container .service-content .srv .text h3 {
+    margin: 0 0 20px;
+}
+
+.services .container .service-content .srv .text p {
+    color: #333;
+    line-height: 1.8;
+    font-weight: 300;
+}
+
+.services .container .service-content .image {
+    text-align: center;
+    position: relative;
+    z-index: 0;
+}
+
+.services .container .service-content .image::before {
+    content: "";
+    background-color: var(--secondary-color);
+    width: 100px;
+    height: calc(100% + 100px);
+    top: -50px;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.services .container .service-content .image img {
+    width: 260px;
+}
+
+@media (max-width: 1199px) {
+    .image-col {
+        display: none;
+    }
 }
